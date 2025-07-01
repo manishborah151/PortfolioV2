@@ -95,7 +95,6 @@ section span {
 
 /* About Section */
 .about-section {
-  min-height: 80vh;
   position: relative;
   background-color: var(--bg-dark);
   color: var(--text);
@@ -140,6 +139,7 @@ section span {
   text-align: left;
   text-transform: uppercase;
   transition: all 2s ease;
+  margin: 1rem 0;
 }
 
 .animated-line {

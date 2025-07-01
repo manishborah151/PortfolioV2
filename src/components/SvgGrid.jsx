@@ -1,15 +1,15 @@
 import React from "react";
 import "./SvgGrid.css";
 
-// Icon file names (stored in public/icons)
-const svgIcons = [
-  "react.svg",
-  "vite.svg",
-  "nextjs.png",
-  "redux.svg",
-  "javascript.svg",
-  "tailwind.svg",
-];
+// Static imports from src/assets/icons
+import react from "../assets/icons/react.svg";
+import vite from "../assets/icons/vite.svg";
+import nextjs from "../assets/icons/nextjs.png";
+import redux from "../assets/icons/redux.svg";
+import javascript from "../assets/icons/javascript.svg";
+import tailwind from "../assets/icons/tailwind.svg";
+
+const svgIcons = [react, vite, nextjs, redux, javascript, tailwind];
 
 const GRID_ROWS = 4;
 const GRID_COLS = 9;
@@ -82,7 +82,7 @@ export default function SvgGrid() {
         >
           {icon && (
             <div className="icon">
-              <img src={`icons/${icon}`} alt={icon} />
+              <img src={icon} alt="tech-icon" />
             </div>
           )}
         </div>

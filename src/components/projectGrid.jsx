@@ -1,11 +1,15 @@
 import {Github, ExternalLink, Tag} from "lucide-react";
 import AnimatedSection from "../utils/animatedSection";
 import "./projectGrid.css";
+import img1 from "../assets/projects/Artboard 1.jpg";
+import img2 from "../assets/projects/Artboard 2.jpg";
+import img3 from "../assets/projects/Artboard 3.jpg";
+import img4 from "../assets/projects/Artboard 4.jpg";
 
 const projects = [
   {
     title: "Book Keeper",
-    image: "../../public/projects/Artboard 1.jpg",
+    image: img1,
     description:
       "Inventory management system for small businesses with local data storage.",
     tech: ["ReactJS", "TailwindCSS"],
@@ -14,27 +18,29 @@ const projects = [
     demo: "https://manishborah151.github.io/BookKeeper/",
   },
   {
-    title: "Ravi Pratap Singh Studio  ",
+    title: "Ravi Pratap Singh Studio",
     badge: (
-      <>
-        <span style={{borderRadius: "2rem", backgroundColor: "var(--info)"}}>
-          <Tag size={10} style={{paddingRight: " 4px"}} />
-          Client
-        </span>
-      </>
+      <span
+        style={{
+          borderRadius: "2rem",
+          backgroundColor: "var(--info)",
+          padding: "0 6px",
+        }}
+      >
+        <Tag size={10} style={{paddingRight: "4px"}} />
+        Client
+      </span>
     ),
-    image: "../../public/projects/Artboard 2.jpg",
+    image: img2,
     description:
       "Ravi Pratap Singh Studio is a fashion and lifestyle brand landing and shop page",
     tech: ["ReactJS", "MangoDB", "ExpressJS", "NodeJs", "Material UI"],
     github: "https://github.com/manishborah151/",
     demo: "https://www.ravipratapsingh.co.in/",
   },
-
   {
     title: "WeatherApp",
-
-    image: "projects/Artboard 3.jpg",
+    image: img3,
     description:
       "Weather forecasting app using OpenWeatherMap API and real-time chart display.",
     tech: ["React", "Material UI", "Chart.js"],
@@ -44,7 +50,7 @@ const projects = [
   },
   {
     title: "WeatherApp",
-    image: "projects/Artboard 4.jpg",
+    image: img4,
     description:
       "Weather forecasting app using OpenWeatherMap API and real-time chart display.",
     tech: ["React", "Material UI", "Chart.js"],
