@@ -1,0 +1,112 @@
+.projects-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 3rem;
+}
+
+.project-card {
+  background-color: var(--glass-bg-light);
+  border-radius: 2rem;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+  transition: all 0.4s ease-out;
+  box-shadow: inset 0 0 2px var(--border);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px var(--border);
+}
+
+.project-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 1rem;
+  text-align: left;
+}
+.head-text {
+  display: flex;
+  justify-content: space-between;
+}
+.project-content h3 {
+  margin-bottom: 0.5rem;
+}
+.project-content span {
+  color: var(--text);
+
+  padding: 0 8px;
+  margin-left: 8px;
+  float: none;
+}
+
+.project-content p {
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-muted);
+}
+.project-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.tech-stack li {
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  text-shadow: 2px 2px 4px var(--border);
+  cursor: default;
+  transition: all 0.4s ease-in-out;
+}
+.tech-stack li:hover {
+  background: var(--info);
+}
+
+.project-links a {
+  margin-right: 0.8rem;
+  color: var(--text-muted);
+  transition: all 0.2s;
+
+  padding: 0.5rem 0.6rem;
+  text-decoration: none;
+  font-size: large;
+  border-radius: 1rem;
+  transition: all 0.5s ease-in-out;
+  padding: 0.4rem 1rem;
+}
+.project-links svg {
+  transition: all 0.4s ease-in-out;
+}
+
+.project-links a:hover {
+  color: var(--primary);
+
+  text-shadow: 2px 2px 4px var(--border);
+}
+.project-links a:hover svg {
+  transform: scale(1.3);
+}
+
+@media only screen and (max-width: 478px) {
+  .projects-grid {
+    padding: 1rem;
+  }
+  .project-card {
+    box-shadow: 1px 1px 4px var(--border);
+  }
+}

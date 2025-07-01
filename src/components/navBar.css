@@ -1,0 +1,234 @@
+.appIcon {
+  transition: all cubic-bezier(0.25, 1, 0.5, 1) 200ms;
+}
+
+.appIcon:hover {
+  width: 80px;
+  height: 80px;
+  margin-top: -40px;
+}
+.appIcon:hover a {
+  color: var(--text);
+  transform: scale(1.8);
+  box-shadow: 1px 4px 8px var(--border);
+}
+
+/* Right side */
+.appIcon:hover + .appIcon {
+  width: calc(70px + var(--dock-offset-right, 0px));
+  height: calc(70px + var(--dock-offset-right, 0px));
+  margin-top: calc(-25px + var(--dock-offset-right, 0px) * -1);
+}
+.appIcon:hover + .appIcon a {
+  transform: scale(1.4);
+}
+.appIcon:hover + .appIcon + .appIcon a {
+  transform: scale(1.2);
+}
+
+.appIcon:hover + .appIcon + .appIcon {
+  width: calc(60px + var(--dock-offset-right, 0px));
+  height: calc(60px + var(--dock-offset-right, 0px));
+  margin-top: calc(-15px + var(--dock-offset-right, 0px) * -1);
+}
+
+/* Left side */
+.appIcon:has(+ .appIcon:hover) {
+  width: calc(65px + var(--dock-offset-left, 0px));
+  height: calc(65px + var(--dock-offset-left, 0px));
+  margin-top: calc(-25px + var(--dock-offset-left, 0px) * -1);
+}
+.appIcon:has(+ .appIcon:hover a) {
+  transform: scale(1.4);
+}
+
+.appIcon:has(+ .appIcon + .appIcon:hover) {
+  width: calc(60px + var(--dock-offset-left, 0px));
+  height: calc(60px + var(--dock-offset-left, 0px));
+  margin-top: calc(-15px + var(--dock-offset-left, 0px) * -1);
+}
+
+.appIcon:has(+ .appIcon + .appIcon:hover a) {
+  transform: scale(1.2);
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: fixed;
+  bottom: 1rem;
+  width: 100%;
+  height: 70px;
+}
+.dock {
+  height: 40px;
+  display: flex;
+  gap: 5rem;
+  margin: auto;
+
+  border-radius: 2rem;
+  padding: 0 12px;
+  z-index: 1000;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    var(--bg)
+  );
+  box-shadow: rgba(168, 168, 168, 0.1) 0px 0px 0px 1px inset;
+  backdrop-filter: blur(5px);
+}
+
+.dock ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.appIcon {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -15px;
+  border-radius: 1rem;
+}
+
+.appIcon a {
+  box-shadow: rgba(160, 160, 160, 0.116) 0px 0px 0px 1px inset;
+  display: block;
+  border-radius: 50%;
+  color: var(--text-muted);
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0), var(--bg));
+  backdrop-filter: blur(5px);
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  transition: all cubic-bezier(0.25, 1, 0.5, 1) 200ms;
+  justify-content: center;
+}
+.appIcon a:active {
+  box-shadow: inset 1px 1px 4px var(--border);
+}
+
+.appIcon:hover .tooltip,
+.appIcon:focus-within .tooltip {
+  opacity: 1;
+}
+
+.tooltip {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: ease-in opacity 100ms;
+  display: block;
+  background: var(--bg-dark);
+  padding: 2px 6px;
+  border-radius: 12px;
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  width: auto;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px 12px 8px 1px;
+  white-space: nowrap;
+}
+
+.source-links {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  right: 20px;
+  top: 20px;
+  text-align: right;
+}
+
+.source-links a {
+  color: #fff;
+  opacity: 0.3;
+  margin-bottom: 8px;
+}
+
+.source-links a:hover {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 478px) {
+  .appIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .appIcon a {
+    box-shadow: rgba(160, 160, 160, 0.116) 0px 0px 0px 1px inset;
+    display: block;
+    border-radius: 50%;
+    color: var(--text-muted);
+    background-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0),
+      var(--bg)
+    );
+    backdrop-filter: blur(5px);
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    transition: all cubic-bezier(0.25, 1, 0.5, 1) 200ms;
+    justify-content: center;
+  }
+  .appIcon:hover {
+    width: 60px;
+    height: 60px;
+    margin-top: -40px;
+  }
+  .appIcon:hover a {
+    color: var(--text);
+    transform: scale(1.5);
+  }
+
+  /* Right side */
+  .appIcon:hover + .appIcon {
+    width: calc(50px + var(--dock-offset-right, 0px));
+    height: calc(50px + var(--dock-offset-right, 0px));
+    margin-top: calc(-25px + var(--dock-offset-right, 0px) * -1);
+  }
+  .appIcon:hover + .appIcon a {
+    transform: scale(1.4);
+  }
+  .appIcon:hover + .appIcon + .appIcon a {
+    transform: scale(1.2);
+  }
+
+  .appIcon:hover + .appIcon + .appIcon {
+    width: calc(45px + var(--dock-offset-right, 0px));
+    height: calc(45px + var(--dock-offset-right, 0px));
+    margin-top: calc(-15px + var(--dock-offset-right, 0px) * -1);
+  }
+
+  /* Left side */
+  .appIcon:has(+ .appIcon:hover) {
+    width: calc(50px + var(--dock-offset-left, 0px));
+    height: calc(50px + var(--dock-offset-left, 0px));
+    margin-top: calc(-25px + var(--dock-offset-left, 0px) * -1);
+  }
+  .appIcon:has(+ .appIcon:hover a) {
+    transform: scale(1.4);
+  }
+
+  .appIcon:has(+ .appIcon + .appIcon:hover) {
+    width: calc(45px + var(--dock-offset-left, 0px));
+    height: calc(45px + var(--dock-offset-left, 0px));
+    margin-top: calc(-15px + var(--dock-offset-left, 0px) * -1);
+  }
+
+  .appIcon:has(+ .appIcon + .appIcon:hover a) {
+    transform: scale(1.2);
+  }
+}
