@@ -23,7 +23,7 @@ const projects = [
         </span>
       </>
     ),
-    image: "./public/Artboard 2.jpg",
+    image: "./Artboard 2.jpg",
     description:
       "Ravi Pratap Singh Studio is a fashion and lifestyle brand landing and shop page",
     tech: ["ReactJS", "MangoDB", "ExpressJS", "NodeJs", "Material UI"],
@@ -34,7 +34,7 @@ const projects = [
   {
     title: "WeatherApp",
 
-    image: "./public/Artboard 3.jpg",
+    image: "./Artboard 3.jpg",
     description:
       "Weather forecasting app using OpenWeatherMap API and real-time chart display.",
     tech: ["React", "Material UI", "Chart.js"],
@@ -44,7 +44,7 @@ const projects = [
   },
   {
     title: "WeatherApp",
-    image: "./public/Artboard 4.jpg",
+    image: "./Artboard 4.jpg",
     description:
       "Weather forecasting app using OpenWeatherMap API and real-time chart display.",
     tech: ["React", "Material UI", "Chart.js"],
