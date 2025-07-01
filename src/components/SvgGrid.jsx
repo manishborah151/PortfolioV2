@@ -3,12 +3,12 @@ import "./SvgGrid.css";
 
 // Icon file names (stored in public/icons)
 const svgIcons = [
-  "react.svg",
-  "vite.svg",
-  "nextjs.png",
-  "redux.svg",
-  "javascript.svg",
-  "tailwind.svg",
+  "public/icons/react.svg",
+  "public/icons/vite.svg",
+  "public/icons/nextjs.png",
+  "public/icons/redux.svg",
+  "public/icons/javascript.svg",
+  "public/icons/tailwind.svg",
 ];
 
 const GRID_ROWS = 4;
