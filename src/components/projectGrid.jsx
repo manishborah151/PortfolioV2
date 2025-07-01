@@ -5,7 +5,7 @@ import "./projectGrid.css";
 const projects = [
   {
     title: "Book Keeper",
-    image: "projects/Artboard 1.jpg",
+    image: "../../public/projects/Artboard 1.jpg",
     description:
       "Inventory management system for small businesses with local data storage.",
     tech: ["ReactJS", "TailwindCSS"],
@@ -23,7 +23,7 @@ const projects = [
         </span>
       </>
     ),
-    image: "projects/Artboard 2.jpg",
+    image: "../../public/projects/Artboard 2.jpg",
     description:
       "Ravi Pratap Singh Studio is a fashion and lifestyle brand landing and shop page",
     tech: ["ReactJS", "MangoDB", "ExpressJS", "NodeJs", "Material UI"],
