@@ -3,12 +3,12 @@ import "./SvgGrid.css";
 
 // Icon file names (stored in public/icons)
 const svgIcons = [
-  "icons/react.svg",
-  "icons/vite.svg",
-  "icons/nextjs.png",
-  "icons/redux.svg",
-  "icons/javascript.svg",
-  "icons/tailwind.svg",
+  "react.svg",
+  "vite.svg",
+  "nextjs.png",
+  "redux.svg",
+  "javascript.svg",
+  "tailwind.svg",
 ];
 
 const GRID_ROWS = 4;
@@ -82,7 +82,7 @@ export default function SvgGrid() {
         >
           {icon && (
             <div className="icon">
-              <img src={`/icons/${icon}`} alt={icon} />
+              <img src={`icons/${icon}`} alt={icon} />
             </div>
           )}
         </div>
