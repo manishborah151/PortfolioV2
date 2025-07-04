@@ -16,8 +16,25 @@ function App() {
         <AnimatedSection>
           <div className="hero-content">
             <h2 className="hero-subTittle">I'm</h2>
-
-            <h1 className="hero-tittle">Manish Borah</h1>
+            <div className="hero-Tittle">
+              <svg
+                height="140"
+                stroke="var(--text-muted)"
+                stroke-width="2"
+                hero-tittle
+                class="text-line "
+                width="100%"
+              >
+                <text
+                  x="50%"
+                  dominant-baseline="middle"
+                  text-anchor="middle"
+                  y="50%"
+                >
+                  MANISH BORAH
+                </text>
+              </svg>
+            </div>
             <h2 className="hero-subTittle">
               A design-minded <span>Front-End Developer</span>
               <br /> focused on building beautiful interfaces & experiences.
